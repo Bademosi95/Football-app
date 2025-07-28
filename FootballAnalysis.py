@@ -80,8 +80,8 @@ Squad['expected_gdpg'] = Squad['xGD/90'] / Squad['MP'] / Squad['avg_xgdpg']
 
 # --- Prediction Model ---
 def expected_goals(home_team: str, away_team: str, Country: str):
-    home = teams[(teams['Squad'] == home_team) & (teams['Country'] == Country)].iloc[0]
-    away = teams[(teams['Squad'] == away_team) & (teams['Country'] == Country)].iloc[0]
+    home = Squad[(Squad['Squad'] == home_team) & (Squad['Country'] == Country)].iloc[0]
+    away = Squad[(Squad['Squad'] == away_team) & (Squad['Country'] == Country)].iloc[0]
 
 # Compute expected goals using Poisson model
     Country_avg = league_averages[league_averages['Country'] == Country].iloc[0]
@@ -95,8 +95,8 @@ def expected_goals(home_team: str, away_team: str, Country: str):
 
 
 def expected_gconceded (home_team: str, away_team: str, Country: str):
-    home = teams[(teams['Squad'] == home_team) & (teams['Country'] == Country)].iloc[0]
-    away = teams[(teams['Squad'] == away_team) & (teams['Country'] == Country)].iloc[0]
+    home = Squad[(Squad['Squad'] == home_team) & (Squad['Country'] == Country)].iloc[0]
+    away = Squad[(Squad['Squad'] == away_team) & (Squad['Country'] == Country)].iloc[0]
 
 # Compute expected goals using Poisson model
     Country_avg = league_averages[league_averages['Country'] == Country].iloc[0]
@@ -109,8 +109,8 @@ def expected_gconceded (home_team: str, away_team: str, Country: str):
 
 
 def expected_gdpg (home_team: str, away_team: str, Country: str):
-    home = teams[(teams['Squad'] == home_team) & (teams['Country'] == Country)].iloc[0]
-    away = teams[(teams['Squad'] == away_team) & (teams['Country'] == Country)].iloc[0]
+    home = Squad[(Squad['Squad'] == home_team) & (Squad['Country'] == Country)].iloc[0]
+    away = Squad[(Squad['Squad'] == away_team) & (Squad['Country'] == Country)].iloc[0]
 
 # Compute expected goals using Poisson model
     Country_avg = league_averages[league_averages['Country'] == Country].iloc[0]
